@@ -317,6 +317,19 @@ tbody tr:nth-child(even) {
   background: #c32b3c;
 }
 
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0.5em 0 1em;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  font-size: 1em;
+  color: #333;
+}
+
 .contact-form label {
   font-weight: 600;
   margin-top: 1.5em; /* add spacing above each label */
