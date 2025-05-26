@@ -16,6 +16,7 @@ a {
 /* Navbar */
 .navbar {
   display: flex;
+  justify-content: space-between; /* keeps logo left, nav links right */
   align-items: center;
   padding: 1em 2em;
   background: white;
@@ -23,10 +24,11 @@ a {
   position: sticky;
   top: 0;
   z-index: 999;
+  flex-wrap: nowrap; /* prevents wrapping */
 }
 
 .logo img {
-  height: 60px; /* try 70px or 80px if needed */
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -35,6 +37,7 @@ a {
   list-style: none;
   display: flex;
   gap: 1.5em;
+  margin-left: auto; /* ensures nav stays on right if needed */
 }
 
 .nav-links li a {
