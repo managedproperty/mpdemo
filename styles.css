@@ -329,7 +329,8 @@ tbody tr:nth-child(even) {
   font-weight: normal;
   font-size: 1em;
   color: #333;
-  display: flex;
+  display: inline-flex;          /* changed from flex to inline-flex */
   align-items: center;
   gap: 0.5em;
+  white-space: nowrap;          /* prevent text wrapping */
 }
