@@ -16,7 +16,6 @@ a {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
   background: white;
@@ -26,9 +25,10 @@ a {
   z-index: 999;
 }
 
-.logo {
-  font-weight: 600;
-  font-size: 1.4em;
+.logo img {
+  height: 60px; /* try 70px or 80px if needed */
+  width: auto;
+  display: block;
 }
 
 .nav-links {
