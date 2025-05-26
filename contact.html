@@ -41,12 +41,28 @@
 
 <label for="reason">Reason for Contact</label>
 <div class="checkbox-group">
-<label>Current tenant enquiry <input type="checkbox" name="reason" value="Current tenant enquiry" /></label>
-<label>Current property owner enquiry <input type="checkbox" name="reason" value="Current property owner enquiry" /></label>
-<label>Neighbour contact <input type="checkbox" name="reason" value="Neighbour contact" /></label>
-<label>New client contact <input type="checkbox" name="reason" value="New client contact" /></label>
-<label>Other <input type="checkbox" name="reason" value="Other" /></label>
+  <div class="checkbox-row">
+    <span>Current tenant enquiry</span>
+    <input type="checkbox" name="reason" value="Current tenant enquiry" />
+  </div>
+  <div class="checkbox-row">
+    <span>Current property owner enquiry</span>
+    <input type="checkbox" name="reason" value="Current property owner enquiry" />
+  </div>
+  <div class="checkbox-row">
+    <span>Neighbour contact</span>
+    <input type="checkbox" name="reason" value="Neighbour contact" />
+  </div>
+  <div class="checkbox-row">
+    <span>New client contact</span>
+    <input type="checkbox" name="reason" value="New client contact" />
+  </div>
+  <div class="checkbox-row">
+    <span>Other</span>
+    <input type="checkbox" name="reason" value="Other" />
+  </div>
 </div>
+
 
   <label for="message">Additional Information</label>
   <textarea id="message" name="message" rows="6" required></textarea>
