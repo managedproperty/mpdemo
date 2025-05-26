@@ -181,3 +181,24 @@ button:hover {
   background: #222;
   color: white;
 }
+
+.content-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.content-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-section h2, .content-section h3 {
+  color: #e63946;
+  margin-top: 1.5em;
+}
+
+.content-section p {
+  margin-bottom: 1.2em;
+  font-size: 1.05em;
+  color: #444;
+}
