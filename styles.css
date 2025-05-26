@@ -272,12 +272,13 @@ tbody tr:nth-child(even) {
   background-color: #fafafa;
 }
 
+
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1em;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 40px auto 60px auto;
 }
 
 .contact-form label {
@@ -293,6 +294,11 @@ tbody tr:nth-child(even) {
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.content-section {
+  padding: 80px 20px;
+  background: #fff;
 }
 
 .contact-form button {
