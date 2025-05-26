@@ -334,3 +334,9 @@ tbody tr:nth-child(even) {
   gap: 0.4em;         /* tighter gap */
   white-space: normal; /* allow wrapping if needed */
 }
+
+/* Optional: Improve checkbox visibility and behavior */
+input[type="checkbox"] {
+  transform: scale(1.2); /* makes them bigger */
+  cursor: pointer;       /* shows pointer on hover */
+}
