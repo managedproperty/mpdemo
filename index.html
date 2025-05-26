@@ -48,24 +48,33 @@
     </div>
   </section>
 
-  <section class="testimonials content-section">
-    <div class="container">
-      <h2 style="text-align: center;">What Our Clients Say</h2>
-
-      <div class="testimonial-slide active">
-        <blockquote>“Having been a tenant with Managed Property for several years, I’ve always experienced professional and polite responses. Any issues were attended to promptly and without fuss.”<cite>— Dee Stein</cite></blockquote>
-        <blockquote>“If you are looking for dedicated and excellent property managers, then look no further. The team are always willing to find solutions to unique problems and work hard to make our investment work.”<cite>— Rolly S</cite></blockquote>
+ <section class="testimonials content-section">
+  <div class="container">
+    <h2 style="text-align: center;">What Our Clients Say</h2>
+    <div class="testimonial-carousel">
+      <div class="testimonial active">
+        <p>“Having been a tenant with Managed Property for several years, I’ve always experienced professional and polite responses. Any issues were attended to promptly and without fuss.”</p>
+        <cite>— Dee Stein</cite>
       </div>
-      <div class="testimonial-slide">
-        <blockquote>“Managed Property has managed our Brisbane investment properties for some years now—it’s always been an efficient and smooth experience.”<cite>— Kate Lawrence-Row</cite></blockquote>
-        <blockquote>“They always go beyond what could ever be expected of them in their roles. The whole team is responsive and professional.”<cite>— Karla Johnston</cite></blockquote>
+      <div class="testimonial">
+        <p>“If you are looking for dedicated and excellent property managers, then look no further. The team are always willing to find solutions to unique problems and work hard to make our investment work.”</p>
+        <cite>— Rolly S</cite>
       </div>
-      <div class="testimonial-slide">
-        <blockquote>“Managed Property has provided prompt, courteous, expert assistance in the day-to-day management of our properties. A seamless experience.”<cite>— Anne Poulsen</cite></blockquote>
-        <blockquote>“Clear communication and fast response. Really impressed with their service.”<cite>— Janelle P.</cite></blockquote>
+      <div class="testimonial">
+        <p>“Managed Property has managed our Brisbane investment properties for some years now—it’s always been an efficient and smooth experience.”</p>
+        <cite>— Kate Lawrence-Row</cite>
+      </div>
+      <div class="testimonial">
+        <p>“They always go beyond what could ever be expected of them in their roles. The whole team is responsive and professional.”</p>
+        <cite>— Karla Johnston</cite>
+      </div>
+      <div class="testimonial">
+        <p>“Managed Property has provided prompt, courteous, expert assistance in the day-to-day management of our properties. A seamless experience.”</p>
+        <cite>— Anne Poulsen</cite>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer class="footer">
     <p><strong>Hours:</strong> Mon–Fri 9–5 | Sat: Inspections | Sun: Closed</p>
@@ -92,6 +101,20 @@
     .then(html => {
       document.getElementById("header").innerHTML = html;
     });
+</script>
+
+<script>
+  let testimonialIndex = 0;
+  const testimonials = document.querySelectorAll(".testimonial");
+
+  function rotateTestimonials() {
+    testimonials.forEach(t => t.classList.remove("active"));
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    testimonials[testimonialIndex].classList.add("active");
+  }
+
+  testimonials[testimonialIndex].classList.add("active");
+  setInterval(rotateTestimonials, 6000);
 </script>
 
 
