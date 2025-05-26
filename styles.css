@@ -348,3 +348,52 @@ input[type="checkbox"] {
   transform: scale(1.2); /* makes them bigger */
   cursor: pointer;       /* shows pointer on hover */
 }
+
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 0.75em 1.5em;
+  margin: 0.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
