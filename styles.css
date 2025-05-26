@@ -310,3 +310,16 @@ tbody tr:nth-child(even) {
 .contact-form button:hover {
   background: #c32b3c;
 }
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0.5em 0 1em;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  font-size: 1em;
+  color: #333;
+}
