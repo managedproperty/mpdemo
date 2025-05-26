@@ -329,3 +329,29 @@ tbody tr:nth-child(even) {
   background: #222;
   color: white;
 }
+
+.testimonial-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  display: none;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 1em;
+  font-weight: 600;
+  font-style: normal;
+  color: #555;
+}
