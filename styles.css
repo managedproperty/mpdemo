@@ -245,3 +245,19 @@ button:hover {
   font-size: 1.1em;
   color: #f0f0f0;
 }
+
+/* Table & FAQ list formatting */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+}
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+ul {
+  padding-left: 1.2em;
+  margin-bottom: 2em;
+}
