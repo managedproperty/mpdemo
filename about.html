@@ -9,15 +9,7 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">ManagedProperty</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="faq.html">FAQs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<div id="header"></div>
 
   <header class="hero image-hero">
   <div class="hero-content">
@@ -47,5 +39,14 @@
     <p>&copy; 2025 Managed Property. All rights reserved.</p>
   </footer>
 
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+    });
+</script>
+
+  
 </body>
 </html>
