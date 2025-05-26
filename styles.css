@@ -135,7 +135,7 @@ a {
 
 /* Image Banner for secondary pages */
 .image-hero {
-  background: url('assets/banner-image.jpg') center center / cover no-repeat;
+  background: url('assets/office-banner.jpg') center center / cover no-repeat;
   height: 50vh;
   position: relative;
   display: flex;
