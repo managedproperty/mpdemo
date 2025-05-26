@@ -9,15 +9,8 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">ManagedProperty</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="faq.html">FAQs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+ <div id="header"></div>
+
 
 <div class="video-background">
   <video autoplay muted loop playsinline>
@@ -92,6 +85,15 @@
     slides[slideIndex].classList.add('active');
     setInterval(rotateSlides, 6000);
   </script>
+
+  <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+    });
+</script>
+
 
 </body>
 </html>
