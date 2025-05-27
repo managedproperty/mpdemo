@@ -391,8 +391,9 @@ tbody tr:nth-child(even) {
 }
 
 .step.active {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  border-bottom: 4px solid #00bcd4;
+  background: #fff;
+  border: 2px solid #00bcd4;
+  box-shadow: 0 8px 24px rgba(0, 188, 212, 0.15);
   opacity: 1;
 }
 
