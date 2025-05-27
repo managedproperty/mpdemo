@@ -114,18 +114,27 @@
 </script>
 
 <script>
-  let stepIndex = 0;
   const steps = document.querySelectorAll('.step');
+  let current = 0;
 
-  function highlightStep() {
-    steps.forEach((step, i) => {
-      step.classList.toggle('active', i === stepIndex);
+  function highlightStepsInSequence() {
+    steps.forEach((step, index) => {
+      if (index <= current) {
+        step.classList.add('active');
+      } else {
+        step.classList.remove('active');
+      }
     });
-    stepIndex = (stepIndex + 1) % steps.length;
+
+    current++;
+
+    if (current >= steps.length) {
+      current = 0;
+    }
   }
 
-  highlightStep();
-  setInterval(highlightStep, 5000);
+  highlightStepsInSequence(); // initial
+  setInterval(highlightStepsInSequence, 2000); // rotate every 2s
 </script>
 
 
