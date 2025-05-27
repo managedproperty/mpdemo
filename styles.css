@@ -266,27 +266,29 @@ a {
 
 .step-number {
   font-weight: 700;
-  font-size: 1.2em;
-  color: #00bcd4;
+  font-size: 1.1em; /* was 1.2em */
+  color: #e63946;   /* changed from blue to red tone */
   margin-bottom: 1em;
 }
 
+
 .step h4 {
-  font-size: 1.3em;
+  font-size: 1.15em;  /* was 1.3em */
   font-weight: 700;
-  color: #002c4b;
+  color: #2c2c2c;
   margin-bottom: 0.8em;
 }
 
+
 .step p {
-  font-size: 1em;
+  font-size: 0.95em;  /* was 1em */
   color: #555;
   line-height: 1.6;
 }
 
 .step.active {
-  border-bottom: 4px solid #00bcd4;
-  box-shadow: 0 8px 24px rgba(0, 188, 212, 0.15);
+  border-bottom: 4px solid #e63946; /* red */
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.2); /* subtle red glow */
 }
 
 /* Contact */
