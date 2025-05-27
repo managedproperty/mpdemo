@@ -100,6 +100,21 @@
   <div id="step1" class="section active">
     <h3>Select a category:</h3>
     <div class="grid">
+      <div class="icon-button" onclick="showStep('electrical')">
+        <span class="material-icons-outlined">bolt</span>
+        Electrical
+      </div>
+      <div class="icon-button" onclick="showStep('plumbing')">
+        <span class="material-icons-outlined">plumbing</span>
+        Plumbing
+      </div>
+    </div>
+  </div>
+
+  <div id="electrical" class="section">
+    <button class="back-button" onclick="goBackTo('step1')">← Back</button>
+    <h3>What’s the issue?</h3>
+    <div class="grid">
       <div class="icon-button" onclick="showStep('lights')">
         <span class="material-icons-outlined">lightbulb</span>
         Lights
@@ -108,6 +123,13 @@
         <span class="material-icons-outlined">electrical_services</span>
         Appliances
       </div>
+    </div>
+  </div>
+
+  <div id="plumbing" class="section">
+    <button class="back-button" onclick="goBackTo('step1')">← Back</button>
+    <h3>What’s the issue?</h3>
+    <div class="grid">
       <div class="icon-button" onclick="showStep('toilet')">
         <span class="material-icons-outlined">wc</span>
         Toilet
@@ -123,9 +145,6 @@
     </div>
   </div>
 
-  <!-- Existing content preserved -->
-
-  <!-- Lights -->
   <div id="lights" class="section">
     <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
     <h3>Lights Not Working</h3>
@@ -143,7 +162,6 @@
     </div>
   </div>
 
-  <!-- Appliances -->
   <div id="appliances" class="section">
     <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
     <h3>Appliance Power Issue</h3>
@@ -161,7 +179,6 @@
     </div>
   </div>
 
-  <!-- Toilet -->
   <div id="toilet" class="section">
     <button class="back-button" onclick="goBackTo('plumbing')">← Back</button>
     <h3>Toilet Blocked or Not Flushing</h3>
@@ -178,7 +195,6 @@
     </div>
   </div>
 
-  <!-- Taps -->
   <div id="taps" class="section">
     <button class="back-button" onclick="goBackTo('plumbing')">← Back</button>
     <h3>Leaking or Noisy Tap</h3>
@@ -196,7 +212,6 @@
     </div>
   </div>
 
-  <!-- Hot Water -->
   <div id="hotwater" class="section">
     <button class="back-button" onclick="goBackTo('plumbing')">← Back</button>
     <h3>No Hot Water</h3>
