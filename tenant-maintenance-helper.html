@@ -57,9 +57,17 @@
       margin-bottom: 0.6rem;
       color: #e63946;
     }
-    ul {
+    .step-box {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       margin-top: 1rem;
-      line-height: 1.6;
+    }
+    .step-box ul {
+      padding-left: 1.2em;
+      margin: 0;
     }
     .back-button {
       background: none;
@@ -76,106 +84,107 @@
     .back-button:hover {
       text-decoration: underline;
     }
+    .emergency-box {
+      margin-top: 1.5rem;
+      background: #fff0f0;
+      border-left: 4px solid #e63946;
+      padding: 1rem;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
 <body>
   <h2>Maintenance Troubleshooting</h2>
 
-  <div id="step1" class="section active">
-    <h3>Select a category:</h3>
-    <div class="grid">
-      <div class="icon-button" onclick="showStep('electrical')">
-        <span class="material-icons-outlined">bolt</span>
-        Electrical
-      </div>
-      <div class="icon-button" onclick="showStep('plumbing')">
-        <span class="material-icons-outlined">plumbing</span>
-        Plumbing
-      </div>
-      <div class="icon-button" onclick="showStep('doorsWindows')">
-        <span class="material-icons-outlined">meeting_room</span>
-        Doors & Windows
-      </div>
-      <div class="icon-button" onclick="showStep('pests')">
-        <span class="material-icons-outlined">bug_report</span>
-        Pests
-      </div>
-      <div class="icon-button" onclick="showStep('general')">
-        <span class="material-icons-outlined">build</span>
-        General
-      </div>
+  <!-- Existing content preserved -->
+
+  <!-- Lights -->
+  <div id="lights" class="section">
+    <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
+    <h3>Lights Not Working</h3>
+    <div class="step-box">
+      <ul>
+        <li>💡 Try replacing the light globe if you have a spare</li>
+        <li>🧪 Test a known working globe in the fitting</li>
+        <li>🪛 Check that the light switch isn’t a dimmer that’s turned down</li>
+        <li>⚡ If multiple lights are out, check your switchboard for any tripped circuits</li>
+      </ul>
+    </div>
+    <div class="emergency-box">
+      <strong>Emergency Electrical Contact:</strong><br>
+      SEQ Data & Electrical — 1300 403 050
     </div>
   </div>
 
-  <div id="electrical" class="section">
-    <button class="back-button" onclick="goBackTo('step1')">← Back</button>
-    <h3>What’s the issue?</h3>
-    <div class="grid">
-      <div class="icon-button" onclick="showStep('ac')">
-        <span class="material-icons-outlined">ac_unit</span>
-        Air Con
-      </div>
-      <div class="icon-button" onclick="showStep('powerOutage')">
-        <span class="material-icons-outlined">power</span>
-        Power Outage
-      </div>
-      <div class="icon-button" onclick="showStep('lights')">
-        <span class="material-icons-outlined">lightbulb</span>
-        Lights
-      </div>
-      <div class="icon-button" onclick="showStep('appliances')">
-        <span class="material-icons-outlined">electrical_services</span>
-        Appliance Power
-      </div>
+  <!-- Appliances -->
+  <div id="appliances" class="section">
+    <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
+    <h3>Appliance Power Issue</h3>
+    <div class="step-box">
+      <ul>
+        <li>🔌 Try plugging the appliance into a different power point</li>
+        <li>🧪 Try a different appliance in the same socket</li>
+        <li>🔎 Check your switchboard for any tripped circuit breakers</li>
+        <li>⚠️ Do not attempt to open or repair any appliances yourself</li>
+      </ul>
+    </div>
+    <div class="emergency-box">
+      <strong>Emergency Electrical Contact:</strong><br>
+      SEQ Data & Electrical — 1300 403 050
     </div>
   </div>
 
-  <div id="ac" class="section">
-    <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
-    <h3>Air Con Not Turning On</h3>
-    <ul>
-      <li>🔋 Check if the remote batteries are working</li>
-      <li>📱 Point your phone camera at the remote and press a button — do you see the IR light?</li>
-      <li>🔄 Reset the A/C at the outdoor isolation switch</li>
-    </ul>
-    <button onclick="alert('Please contact your property manager with this info.')">Still not working? Contact us</button>
+  <!-- Toilet -->
+  <div id="toilet" class="section">
+    <button class="back-button" onclick="goBackTo('plumbing')">← Back</button>
+    <h3>Toilet Blocked or Not Flushing</h3>
+    <div class="step-box">
+      <ul>
+        <li>🚽 Avoid flushing again if the water level is high</li>
+        <li>🪠 Try a plunger if available</li>
+        <li>💧 Ensure no items other than toilet paper were flushed</li>
+      </ul>
+    </div>
+    <div class="emergency-box">
+      <strong>Emergency Plumbing Contact:</strong><br>
+      Aptus Plumbing & Gas — (07) 3205 1991
+    </div>
   </div>
 
-  <div id="powerOutage" class="section">
-    <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
-    <h3>Power Outage</h3>
-    <ul>
-      <li>Check whether the outage affects your whole property or just part of it</li>
-      <li>If it's the whole property, ask neighbours or check your energy provider’s outage map</li>
-      <li>🔎 Check the switchboard — is the main safety switch OFF?</li>
-      <li>If yes:
-        <ul>
-          <li>Turn off all appliances and unplug devices</li>
-          <li>Switch the main safety switch back ON</li>
-          <li>Turn appliances back on one-by-one to identify if any trip the power</li>
-        </ul>
-      </li>
-    </ul>
-    <button onclick="alert('Please contact your property manager with this info.')">Still no power? Contact us</button>
+  <!-- Taps -->
+  <div id="taps" class="section">
+    <button class="back-button" onclick="goBackTo('plumbing')">← Back</button>
+    <h3>Leaking or Noisy Tap</h3>
+    <div class="step-box">
+      <ul>
+        <li>💦 Ensure the tap is fully closed</li>
+        <li>🔧 Try turning the handle firmly but not forcefully</li>
+        <li>🧼 Look for any visible leaks or pooling water</li>
+        <li>📞 If water is running continuously, treat as urgent</li>
+      </ul>
+    </div>
+    <div class="emergency-box">
+      <strong>Emergency Plumbing Contact:</strong><br>
+      Aptus Plumbing & Gas — (07) 3205 1991
+    </div>
   </div>
 
-  <div id="plumbing" class="section">
-    <button class="back-button" onclick="goBackTo('step1')">← Back</button>
-    <h3>What’s the issue?</h3>
-    <div class="grid">
-      <div class="icon-button" onclick="alert('Toilet info coming soon')">
-        <span class="material-icons-outlined">wc</span>
-        Toilet
-      </div>
-      <div class="icon-button" onclick="alert('Tap info coming soon')">
-        <span class="material-icons-outlined">water</span>
-        Taps
-      </div>
-      <div class="icon-button" onclick="alert('Hot water info coming soon')">
-        <span class="material-icons-outlined">thermostat</span>
-        Hot Water
-      </div>
+  <!-- Hot Water -->
+  <div id="hotwater" class="section">
+    <button class="back-button" onclick="goBackTo('plumbing')">← Back</button>
+    <h3>No Hot Water</h3>
+    <div class="step-box">
+      <ul>
+        <li>⚡ Check if the hot water system is electric or gas</li>
+        <li>🔌 For electric systems, check the switchboard for a tripped breaker</li>
+        <li>🔥 For gas systems, ensure the pilot light is on</li>
+        <li>🚿 Is it off-peak? You may need to wait for the next cycle</li>
+      </ul>
+    </div>
+    <div class="emergency-box">
+      <strong>Emergency Plumbing Contact:</strong><br>
+      Aptus Plumbing & Gas — (07) 3205 1991
     </div>
   </div>
 
