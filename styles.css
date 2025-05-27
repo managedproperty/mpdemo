@@ -481,3 +481,20 @@ button:hover {
   height: auto;
   overflow: visible;
 }
+
+.back-button {
+  background: none;
+  border: none;
+  color: #e63946;
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
