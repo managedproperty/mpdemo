@@ -466,14 +466,18 @@ button:hover {
 }
 
 .section {
-  display: none;
+  visibility: hidden;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, height 0.3s ease;
 }
 
 .section.active {
-  display: block;
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
+  height: auto;
+  overflow: visible;
 }
