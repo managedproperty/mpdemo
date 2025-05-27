@@ -93,6 +93,22 @@
         <span class="material-icons-outlined">plumbing</span>
         Plumbing
       </div>
+      <div class="icon-button" onclick="showStep('hotwater')">
+        <span class="material-icons-outlined">water_heater</span>
+        Hot Water
+      </div>
+      <div class="icon-button" onclick="showStep('doorsWindows')">
+        <span class="material-icons-outlined">meeting_room</span>
+        Doors & Windows
+      </div>
+      <div class="icon-button" onclick="showStep('pests')">
+        <span class="material-icons-outlined">bug_report</span>
+        Pests
+      </div>
+      <div class="icon-button" onclick="showStep('general')">
+        <span class="material-icons-outlined">build</span>
+        General
+      </div>
     </div>
   </div>
 
@@ -103,6 +119,18 @@
       <div class="icon-button" onclick="showStep('ac')">
         <span class="material-icons-outlined">ac_unit</span>
         Air Con
+      </div>
+      <div class="icon-button" onclick="showStep('powerOutage')">
+        <span class="material-icons-outlined">power</span>
+        Power Outage
+      </div>
+      <div class="icon-button" onclick="showStep('lights')">
+        <span class="material-icons-outlined">lightbulb</span>
+        Lights
+      </div>
+      <div class="icon-button" onclick="showStep('appliances')">
+        <span class="material-icons-outlined">electrical_services</span>
+        Appliance Power
       </div>
     </div>
   </div>
@@ -116,6 +144,24 @@
       <li>🔄 Reset the A/C at the outdoor isolation switch</li>
     </ul>
     <button onclick="alert('Please contact your property manager with this info.')">Still not working? Contact us</button>
+  </div>
+
+  <div id="powerOutage" class="section">
+    <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
+    <h3>Power Outage</h3>
+    <ul>
+      <li>Check whether the outage affects your whole property or just part of it</li>
+      <li>If it's the whole property, ask neighbours or check your energy provider’s outage map</li>
+      <li>🔎 Check the switchboard — is the main safety switch OFF?</li>
+      <li>If yes:
+        <ul>
+          <li>Turn off all appliances and unplug devices</li>
+          <li>Switch the main safety switch back ON</li>
+          <li>Turn appliances back on one-by-one to identify if any trip the power</li>
+        </ul>
+      </li>
+    </ul>
+    <button onclick="alert('Please contact your property manager with this info.')">Still no power? Contact us</button>
   </div>
 
   <div id="plumbing" class="section">
