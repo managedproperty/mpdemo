@@ -236,7 +236,7 @@ a {
 
 /* Steps (Switch Process) */
 .switch-steps {
-  padding: 80px 20px;
+  padding: 40px 20px 80px; /* top, sides, bottom */
   background: #f9f9f9;
 }
 
