@@ -242,54 +242,61 @@ a {
 
 .step-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* force exactly 4 columns */
-  gap: 1.5em;
-  max-width: 1040px; /* slightly smaller than before */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2em;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
 
 .step {
   background: white;
-  border-radius: 20px;
-  padding: 1.5em; /* was 2em */
+  border-radius: 16px;
+  padding: 1.2em 1.2em 1.5em;
   text-align: left;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
   position: relative;
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 300px; /* optional: adjust slightly if it looks too tall */
+  justify-content: flex-start;
+  min-height: 250px;
 }
+
 
 
 .step-number {
   font-weight: 700;
-  font-size: 1.1em; /* was 1.2em */
-  color: #e63946;   /* changed from blue to red tone */
-  margin-bottom: 1em;
+  font-size: 0.95em;
+  color: #e63946;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 
 .step h4 {
-  font-size: 1.15em;  /* was 1.3em */
+  font-size: 1.05em;
   font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 0.8em;
+  color: #1a1a1a;
+  margin: 0 0 0.6em;
 }
+
 
 
 .step p {
-  font-size: 0.95em;  /* was 1em */
-  color: #555;
-  line-height: 1.6;
+  font-size: 0.9em;
+  color: #444;
+  line-height: 1.4;
+  margin: 0;
 }
 
+
 .step.active {
-  border-bottom: 4px solid #e63946; /* red */
-  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.2); /* subtle red glow */
+  border-bottom: 3px solid #e63946;
+  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.15);
 }
+
 
 /* Contact */
 .contact-section {
