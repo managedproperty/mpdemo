@@ -412,3 +412,52 @@ tbody tr:nth-child(even) {
   font-size: 1em;
   color: #555;
 }
+
+.switch-steps {
+  padding: 4em 2em;
+  background-color: #fff;
+}
+
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2em;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+  background: #fafafa;
+}
+
+.step-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step-box h3 {
+  color: #b95858;
+  font-size: 0.95em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+}
+
+.step-box h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+  color: #2c2c2c;
+}
+
+.step-box p {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.6;
+}
+
