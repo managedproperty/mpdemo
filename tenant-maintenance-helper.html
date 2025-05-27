@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,10 +49,26 @@
       margin-top: 1rem;
       line-height: 1.6;
     }
+    .back-button {
+      background: none;
+      border: none;
+      color: #e63946;
+      font-weight: 600;
+      font-size: 1em;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+      display: inline-block;
+    }
+    .back-button:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <h2>Maintenance Troubleshooting</h2>
+
   <div id="step1" class="section active">
     <h3>Select a category:</h3>
     <div class="grid">
@@ -67,6 +82,7 @@
   </div>
 
   <div id="electrical" class="section">
+    <button class="back-button" onclick="goBackTo('step1')">← Back</button>
     <h3>What’s the issue?</h3>
     <div class="grid">
       <div class="icon-button" onclick="showStep('ac')">
@@ -76,6 +92,7 @@
   </div>
 
   <div id="ac" class="section">
+    <button class="back-button" onclick="goBackTo('electrical')">← Back</button>
     <h3>Air Con Not Turning On</h3>
     <ul>
       <li>🔋 Check if the remote batteries are working</li>
@@ -86,6 +103,7 @@
   </div>
 
   <div id="plumbing" class="section">
+    <button class="back-button" onclick="goBackTo('step1')">← Back</button>
     <h3>What’s the issue?</h3>
     <div class="grid">
       <div class="icon-button" onclick="alert('Toilet info coming soon')">
@@ -97,13 +115,17 @@
     </div>
   </div>
 
-<script>
-  function showStep(id) {
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(id).classList.add('active');
-  }
-</script>
+  <script>
+    function showStep(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+
+    function goBackTo(id) {
+      showStep(id);
+    }
+  </script>
 </body>
 </html>
