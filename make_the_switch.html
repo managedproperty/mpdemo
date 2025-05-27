@@ -25,27 +25,28 @@
     <section class="switch-steps">
   <div class="step-grid">
     <div class="step">
-      <h3>Step 1</h3>
+      <div class="step-number">01</div>
       <h4>Complete the Termination Form</h4>
       <p>Fill out our quick online form to begin the switch. Simple and obligation-free.</p>
     </div>
     <div class="step">
-      <h3>Step 2</h3>
+      <div class="step-number">02</div>
       <h4>We Handle the Switch</h4>
       <p>We contact your current agent directly—no awkward calls needed.</p>
     </div>
     <div class="step">
-      <h3>Step 3</h3>
+      <div class="step-number">03</div>
       <h4>Seamless Handover</h4>
       <p>We collect all keys and tenancy documentation on the agreed handover date.</p>
     </div>
     <div class="step">
-      <h3>Step 4</h3>
+      <div class="step-number">04</div>
       <h4>We Take It From Here</h4>
       <p>We review the lease, onboard your tenants, and schedule an early routine inspection to ensure everything’s on track from day one.</p>
     </div>
   </div>
 </section>
+
 
 
 
@@ -112,20 +113,21 @@
     });
 </script>
 
-  <script>
+<script>
   let stepIndex = 0;
   const steps = document.querySelectorAll('.step');
 
   function highlightStep() {
-    steps.forEach((step, idx) => {
-      step.classList.toggle('active', idx === stepIndex);
+    steps.forEach((step, i) => {
+      step.classList.toggle('active', i === stepIndex);
     });
     stepIndex = (stepIndex + 1) % steps.length;
   }
 
-  highlightStep(); // start with first
+  highlightStep();
   setInterval(highlightStep, 5000);
 </script>
+
 
 
 
