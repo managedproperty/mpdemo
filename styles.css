@@ -363,3 +363,52 @@ tbody tr:nth-child(even) {
   font-style: normal;
   color: #555;
 }
+
+.steps-section {
+  background: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.step {
+  flex: 1 1 200px;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: all 0.4s ease;
+  opacity: 0.4;
+}
+
+.step.active {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-bottom: 4px solid #00bcd4;
+  opacity: 1;
+}
+
+.step h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: #00bcd4;
+}
+
+.step h4 {
+  font-size: 1.3em;
+  color: #002c4b;
+  margin-bottom: 0.5em;
+}
+
+.step p {
+  font-size: 1em;
+  color: #555;
+}
